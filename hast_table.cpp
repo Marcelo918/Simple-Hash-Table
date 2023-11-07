@@ -17,3 +17,25 @@ public:
         data = newData;
     }
 };
+
+class HashTable
+{
+private:
+    vector<DataItem*> hashArray; //vector holds hash table
+    int arraySize;
+    DataItem* pNonItem;  //for deleted items
+
+public:
+    HashTable(int size)  //constructor
+    {
+        arraySize = size;
+        hashArray.resize(arraySize);  //size the vector
+        for (int j = 0; j < arraySize; j++)  //initialize elements
+        {
+            hashArray[j] = NULL;
+        }
+        pNonItem = new DataItem(-1);  //deleted item key is -1
+    }
+
+    
+};
