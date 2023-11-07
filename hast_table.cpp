@@ -53,4 +53,23 @@ public:
         }
         cout << endl;
     }
+
+    int hashFunc(int key)
+    {
+        return key % arraySize; // hash function
+    }
 };
+
+int main()
+{
+    DataItem *pDataItem;
+    int aKey, size, n, keysPerCell;
+    time_t aTime;
+    char choice;
+    // get sizes
+    cout << "Enter size of hash table: ";
+    cin >> size;
+    cout << "Enter initial number of items: ";
+    cin >> n;
+    keysPerCell = 10;
+}
