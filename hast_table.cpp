@@ -86,4 +86,7 @@ int main()
     cout << "Enter initial number of items: ";
     cin >> n;
     keysPerCell = 10;
+
+    HashTable theHashTable(size); // make table
+    srand(static_cast<unsigned>(time(&aTime))); //make random list of numbers
 }
