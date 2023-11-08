@@ -58,6 +58,20 @@ public:
     {
         return key % arraySize; // hash function
     }
+
+    void insert(DataItem *pItem) // insert a DataItem. Assumes table is not full
+    {
+        int key = pItem->data;       // extract key
+        int hashVal = hashFunc(key); // hash the key until empty cell or -1
+
+        while (hashArray[hashVal] != NULL && hashArray[hashVal]->data != -1)
+        {
+            ++hashVal;            // go to next cell
+            hashVal %= arraySize; // wraparound if necessary
+        }
+
+        hashArray[hashVal] = pItem; // insert item
+    }
 };
 
 int main()
