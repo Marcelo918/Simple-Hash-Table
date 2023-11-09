@@ -72,6 +72,25 @@ public:
 
         hashArray[hashVal] = pItem; // insert item
     }
+
+    DataItem *remove(int key) // remove a DataItem
+    {
+        int hashVal = hashFunc(key); // hash the key
+
+        while (hashArray[hashVal] != NULL)
+        {
+            if (hashArray[hashVal]->data == key) // found key?
+            {
+                DataItem *pTemp = hashArray[hashVal]; // save item
+                hashArray[hashVal] = pNonItem;        // delete item
+                return pTemp;                         // return item
+            }
+
+            ++hashVal;            // go to next cell
+            hashVal %= arraySize; // wraparound if necessary
+        }
+        return NULL; // can't find item
+    }
 };
 
 int main()
@@ -87,6 +106,6 @@ int main()
     cin >> n;
     keysPerCell = 10;
 
-    HashTable theHashTable(size); // make table
-    srand(static_cast<unsigned>(time(&aTime))); //make random list of numbers
+    HashTable theHashTable(size);               // make table
+    srand(static_cast<unsigned>(time(&aTime))); // make random list of numbers
 }
