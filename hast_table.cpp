@@ -108,4 +108,10 @@ int main()
 
     HashTable theHashTable(size);               // make table
     srand(static_cast<unsigned>(time(&aTime))); // make random list of numbers
+    for (int j = 0; j < n; j++)                 // insert data
+    {
+        aKey = rand() % (keysPerCell * size); // r
+        pDataItem = new DataItem(aKey);
+        theHashTable.insert(pDataItem);
+    }
 }
