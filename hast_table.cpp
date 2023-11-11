@@ -91,6 +91,23 @@ public:
         }
         return NULL; // can't find item
     }
+
+    DataItem *find(int key) // find item with key
+    {
+        int hashVal = hashFunc(key); // hash the key
+
+        while (hashArray[hashVal] != NULL) // until empty cell
+        {
+            if (hashArray[hashVal]->data == key) // found the key?
+            {
+                return hashArray[hashVal]; // yes, return item
+            }
+
+            ++hashVal;            // go to next cell
+            hashVal %= arraySize; // wraparound if necessary
+        }
+        return NULL; // can't find item
+    }
 };
 
 int main()
