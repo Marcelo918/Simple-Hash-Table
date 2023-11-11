@@ -131,4 +131,46 @@ int main()
         pDataItem = new DataItem(aKey);
         theHashTable.insert(pDataItem);
     }
+
+    while (choice != 'q')
+    {
+        cout << "Enter first letter of show, insert, delete, or find: ";
+        cin >> choice;
+        switch (choice)
+        {
+        case 's':
+            theHashTable.displayTable();
+            break;
+        case 'i':
+            cout << "Enter key value to insert: ";
+            cin >> aKey;
+            pDataItem = new DataItem(aKey);
+            theHashTable.insert(pDataItem);
+            break;
+        case 'd':
+            cout << "Enter key value to delete: ";
+            cin >> aKey;
+            theHashTable.remove(aKey);
+            break;
+        case 'f':
+            cout << "Enter key value to find: ";
+            cin >> aKey;
+            pDataItem = theHashTable.find(aKey);
+            if (pDataItem != NULL)
+            {
+                cout << "Found " << aKey << endl;
+            }
+            else
+            {
+                cout << "Could not find " << aKey << endl;
+            }
+            break;
+        case 'q':
+            cout << "Goodbye! See you soon." << endl;
+            break;
+        default:
+            cout << "Invalid entry\n";
+            break;
+        }
+    }
 }
