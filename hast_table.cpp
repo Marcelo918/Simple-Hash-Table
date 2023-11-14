@@ -12,13 +12,15 @@
 # ******************************************************************************
 */
 
-#include <iostream>  //need this for COUT and CIN
-using namespace std; // need this for COUT and CIN
-#include <iomanip>
-#include <stack>
-#include <vector>
-#include <cstdlib> // for random numbers
-#include <ctime>   // for random numbers
+#include <iostream>  // Required for standard input/output operations (COUT and CIN)
+using namespace std; // Using the standard namespace for COUT and CIN
+
+#include <iomanip>   // Required for input/output manipulators
+#include <stack>     // Required for the Stack Container Adapter
+#include <vector>    // Required for dynamic arrays (vectors)
+#include <cstdlib>   // Required for functions involving random numbers
+#include <ctime>     // Required for functions involving time and random numbers
+
 
 class DataItem
 {
