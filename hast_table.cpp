@@ -12,15 +12,20 @@
 # ******************************************************************************
 */
 
+/*
+Description: Hash Table Implementation in C++. This C++ code implements a simple hash table using linear probing for collision resolution.
+             The hash table is defined using two classes: `DataItem` and `HashTable`. This code provides a hands-on example of a basic hash table
+             implementation in C++, demonstrating key concepts such as hashing, collision resolution, and basic user interaction.
+*/
+
 #include <iostream>  // Required for standard input/output operations (COUT and CIN)
 using namespace std; // Using the standard namespace for COUT and CIN
 
-#include <iomanip>   // Required for input/output manipulators
-#include <stack>     // Required for the Stack Container Adapter
-#include <vector>    // Required for dynamic arrays (vectors)
-#include <cstdlib>   // Required for functions involving random numbers
-#include <ctime>     // Required for functions involving time and random numbers
-
+#include <iomanip> // Required for input/output manipulators
+#include <stack>   // Required for the Stack Container Adapter
+#include <vector>  // Required for dynamic arrays (vectors)
+#include <cstdlib> // Required for functions involving random numbers
+#include <ctime>   // Required for functions involving time and random numbers
 
 class DataItem
 {
