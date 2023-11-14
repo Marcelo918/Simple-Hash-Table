@@ -1,3 +1,17 @@
+/*
+# ******************************************************************************
+# *                               COPYRIGHT NOTICE                             *
+# ******************************************************************************
+# *                                                                            *
+# *  This code is authored by Marcelo Villalobos Diaz                          *
+# *  You are free to use, modify, and distribute this code, provided           *
+# *  you give appropriate credit by including the author's name.               *
+# *                                                                            *
+# *  Copyright (c) 2023 Marcelo Villalobos Diaz                                *
+# *                                                                            *
+# ******************************************************************************
+*/
+
 #include <iostream>  //need this for COUT and CIN
 using namespace std; // need this for COUT and CIN
 #include <iomanip>
